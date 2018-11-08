@@ -4,287 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Web Development</title>
   <link rel="stylesheet" href="css/main.min.css">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128251747-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-128251747-1');
-  </script>
+  <script type="text/javascript" src="js/common.min.js" async></script>
 </head>
 <body>
-  <!-- navbar -->
-  <div class="navbar">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-md-4 col-sm-12">
-          <a class="navbar__logo">logo<span>artist</span></a> 
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <nav class="navbar__menu">
-            <li date-link="aboutUs" class="navbar__menuItem"><a href="">About us</a></li>
-            <li date-link="production" class="navbar__menuItem"><a href="">production</a></li>
-            <li date-link="design" class="navbar__menuItem"><a href="">Design</a></li>
-            <li date-link="team" class="navbar__menuItem"><a href="">Team</a></li>
-          </nav>
-        </div>
-      </div>
-    </div>
+  <header class="header">
+    <h1 class="header__name">Web 
+      <span class="header__designe">design</span> 
+      <span class="header__and">and</span>
+    </h1>
+    <p class="header__development">Development</p>
+    <div class="header__devBG"></div>
+  </header>
+
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__navItem">about</li>
+      <li class="navigation__navItem">work</li>
+      <li class="navigation__navItem">links</li>
+      <li class="navigation__navItem">contact</li>
+    </ul>
+  </nav>
+
+  <div class="block">
+    <p class="block__title">profile freelance developer and designer</p>
   </div>
 
-  <!-- simple slick slider -->
-  <div class="slider">
-    <div class="slider__slideImg">
-      <img src="img/фото3.jpg" alt="">
-    </div>
-
-    <div class="slider__slideImg">
-      <img src="img/фото2.jpg" alt="">
-    </div>
-
-    <div class="slider__slideImg">
-      <img src="img/фото1.jpg" alt="">
-    </div>
-
-    <div class="slider__slideImg">
-      <img src="img/фото5.jpg" alt="">
-    </div>
-
-    <div class="slider__slideImg">
-      <img src="img/фото4.jpg" alt="">
-    </div>
+  <div class="about">
+    <p class="about__text">Edward is a front-end developer and Maria is an artist and ux/ui designer. We are specialize in motion and interaction. As freelancers, we work with startup and individuals.</p>
   </div>
 
-  <section class="aboutUs">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h2 class="aboutUs__header">About Us</h2>
-      </div>
-      <p class="aboutUs__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptas recusandae nostrum tempora voluptates corrupti nulla illum est quam ducimus laborum illo id molestias vero ea, natus, odit quas voluptatum earum doloremque </p>
-      <p class="aboutUs__description">ullam, accusamus fugiat sapiente esse. Harum distinctio totam laudantium consequatur natus laboriosam consectetur temporibus ratione. Cumque, error! Adipisci dolores numquam repellat dolorum nobis fugiat eos asperiores aut unde harum sunt accusamus quo, laboriosam vitae? Eum voluptatibus mollitia deserunt perspiciatis vero consequuntur nemo itaque, accusamus accusantium a saepe facere esse. Accusantium consectetur iste possimus facere nam nisi corporis deserunt cumque ut sapiente, unde neque veritatis ipsa illo ipsum numquam impedit ducimus. Possimus alias, perferendis sit eligendi ipsum, laborum reiciendis cum iusto veritatis nemo explicabo autem laudantium expedita, aliquid sint quasi accusamus? Quam id asperiores quas quo vel! Sapiente facilis laborum, atque quae quis aperiam? Error ex perspiciatis culpa alias dolores impedit corporis sequi unde consequuntur eaque aliquid commodi ea nisi veniam eveniet, delectus doloribus ipsam. Quas temporibus nesciunt ipsa quasi culpa animi neque voluptatibus voluptates similique et quod, soluta dolorem maxime corrupti ducimus dolorum? Mollitia velit dolore beatae labore libero veniam maxime? Repellendus aliquam, tempora possimus consequuntur corporis, in quae ut doloribus eos dolores, expedita similique iste error ducimus?</p>
+  <section class="work">
+
+    <h2>selected work</h2>
+
+    <div class="work__project">
+      <h3>timeline (application)</h3>
+      <img class="work__screen" src=""/>
+      <p>nov. 30 2018</p>
     </div>
+
+    <div class="work__project">
+      <h3>Transfer - kerch (website)</h3>
+      <img class="work__screen" src=""/>
+      <p>nov. 30 2018</p>
+    </div>
+
   </section>
 
-  <section class="production">
-    <div class="container">
-      <div class="row">
-        <h2 class="production__header">Production</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">text</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">Lorem ipsum.</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">text</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">text</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">text</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">text</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">text</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <div class="production__item">
-            <div class="production__overlay"></div>
-            <p class="production__text">text</p>
-            <img class="production__image" src="img/фото1.jpg" alt="">
-          </div>
-        </div>
-      </div>
+  <section class="links">
+    <h3 class="links__portfolio">portfolio links:</h3>
+    <p class="links__worker">Edward - Front-End Developer Portfolio</p>
+    <p class="links__worker">Maria - UX/UI Designer Portfolio</p>
   </section>
 
-  <section class="design">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h2 class="design__header">Design</h2>
-      </div>
-      <div class="design__slider">
-
-        <div class="design__sliderItem">
-          <h3 class="design__itemName">Text</h3>
-          <img class="design__sliderImg" src="img/Фото3.jpg" alt="img">
-          <div class="design__descWrap">
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-          </div>
-        </div>
-
-        <div class="design__sliderItem">
-          <h3 class="design__itemName">Text</h3>
-          <img class="design__sliderImg" src="img/Фото3.jpg" alt="img">
-          <div class="design__descWrap">
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-          </div>
-        </div>
-
-        <div class="design__sliderItem">
-          <h3 class="design__itemName">Text</h3>
-          <img class="design__sliderImg" src="img/Фото3.jpg" alt="img">
-          <div class="design__descWrap">
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-          </div>
-        </div>
-
-        <div class="design__sliderItem">
-          <h3 class="design__itemName">Text</h3>
-          <img class="design__sliderImg" src="img/Фото3.jpg" alt="img">
-          <div class="design__descWrap">
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-            <p class="design__descItem">Lorem, ipsum dolor.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <section class="contact">
+    <h3 class="contact__writeUs">Let's get in touch</h3>
+    <a href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXFBVLCvBwckDFNklwmHCCWgTfTnfXmkSPqmcnmfmjKFsKmnsmFnXMFHVMFqrzRQpKWXx">artgraviton@gmail.com</a>
   </section>
 
-  <section class="team">
-    <div class="container">
-      <div class="team__membersWrap">
-        <div class="row justify-content-center">
-          <h2 class="team__header">Our amazing team</h2>
-        </div>
-        
-        <div class="row justify-content-center">
-          <p class="team__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum placeat minus quisquam commodi provident consequuntur vitae voluptas. Ipsum, facere odio!</p>
-        </div>
-
-        <div class="row justify-content-around">
-
-          <div class="col-md-6">
-            <div class="team__memberItem">
-              <img class="team__memberImg" src="img/фото1.jpg" alt="">
-              <p class="team__memberName">Anna Williams</p>
-              <p class="team__memberJob">Graphic designr</p>
-              <p class="team__aboutMember">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure qui nemo molestiae voluptates ea voluptatibus aliquid vero ipsam esse! Atque!</p>
-              <div class="team__social">
-                <a href="https://www.facebook.com/">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com/">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/?hl=uk">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="team__memberItem">
-              <img class="team__memberImg" src="img/фото4.jpg" alt="">
-              <p class="team__memberName">Anna Williams</p>
-              <p class="team__memberJob">Graphic designr</p>
-              <p class="team__aboutMember">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure qui nemo molestiae voluptates ea voluptatibus aliquid vero ipsam esse! Atque!</p>
-              <div class="team__social">
-                <a href="https://www.facebook.com/">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com/">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row justify-content-center">
-        <p class="footer__description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eligendi necessitatibus odit aliquam sunt, saepe aspernatur nobis asperiores doloremque illum facere qui autem delectus enim voluptatem ab animi nostrum perspiciatis quibusdam? Nisi temporibus quis quasi aliquam ipsam nesciunt ea facilis mollitia facere vel similique impedit, natus eveniet reprehenderit hic esse.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem enim perspiciatis reprehenderit quod unde dolores dolore veritatis et, ut porro!
-        </p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="footer__social">
-          <a href="#">
-            <img class="footer__icon" src="img/phone.png" alt="">
-          </a>
-
-          <a href="https://mail.google.com">
-            <img class="footer__icon footer__envelop" src="img/message.png" alt="">
-          </a>
-
-          <a href="https://www.facebook.com/">
-            <img class="footer__icon" src="img/facebook.png" alt="">
-          </a>
-
-          <a href="https://www.instagram.com/?hl=uk">
-            <img class="footer__icon" src="img/instagram.png" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/common.min.js" type="text/javascript" async></script>
 </body>
 </html>
