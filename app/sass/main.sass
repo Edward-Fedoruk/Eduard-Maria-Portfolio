@@ -1,22 +1,26 @@
 @import './libs'
 @import './vars'
 @import './fonts'
+@import '_mixins/hr'
 
 body 
   background-color: $bgc
-  font-family: Helvetica
+  font-family: HelveticaNeueCyr, Arial, Helvetica, sans-serif
+  overflow-x: hidden
 
 .header
   display: flex
   &__title
-    margin-left: 20vw
+    margin-left: 27vw
     width: 100%
   &__name
     text-transform: uppercase
-    font-size: 13vw
-    word-spacing: -3vw
+    font-size: 15vw
+    word-spacing: -4.3vw
     margin-bottom: 0
     line-height: 0.9
+    margin-top: 5vw
+    font-weight: 200
   &__design 
     text-transform: lowercase
     font-size: 0.4em
@@ -26,16 +30,19 @@ body
     margin-bottom: 1em
     display: inline-block
     font-style: italic
+    font-weight: bold
+    text-transform: lowercase
   &__development
     margin: 0
-    font-size: 7vw
+    font-size: 7.2vw
     text-transform: uppercase
-    line-height: 1
+    line-height: .9
     color: #fff
+    font-weight: 900
   &__devBG
     position: absolute
     top: 0
-    left: 0
+    left: .52vw
     z-index: -1
     background-color: $secondary
     width: 100%
@@ -44,6 +51,78 @@ body
     position: relative
     width: 100%
 
+.navigation
+  position: absolute
+
+.about
+  width: 50vw
+  margin-left: auto
+  &__block
+    margin-top: 8.5vw
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    margin-right: 3.8vw
+  &__partical
+    width: 30vw
+    height: 500px
+    background-color: $secondary
+  &__title
+    width: 20vw 
+    text-transform: uppercase
+    margin: 0
+    font-size: .8vw
+  &__description
+    width: 40vw
+    font-size: 1.6vw
+
+.work
+  margin-left: 27vw
+  text-transform: uppercase
+  &__head
+    font-weight: 900
+    font-size: 10vw
+    text-transform: uppercase
+    line-height: 1
+    margin-bottom: 0
+  &__projectName
+    font-weight: normal
+    font-size: 4vw
+    width: 40%
+    margin: 0
+  &__project
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+    cursor: pointer
+  &__screen
+    height: 15vw
+  &__completed
+    margin-right: 2vw
+
+.links
+  width: 100%
+  margin-left: 27vw
+  &__wrap
+    display: flex
+    width: 25%
+    flex-wrap: wrap
+  &__portfolio
+    font-size: 4vw
+    text-transform: uppercase
+    font-weight: bold
+  &__worker
+    width: 100%
+    color: #000000
+    margin-bottom: 30px
+
+.contact
+  margin-left: 27vw
+  &__writeUs
+    font-size: 10vw
+    text-transform: uppercase
+    color: $secondary
+    
 
 
 
