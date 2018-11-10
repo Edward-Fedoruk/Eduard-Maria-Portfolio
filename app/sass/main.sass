@@ -2,6 +2,49 @@
 @import './vars'
 @import './fonts'
 
+body 
+  background-color: $bgc
+  font-family: Helvetica
+
+.header
+  display: flex
+  &__title
+    margin-left: 20vw
+    width: 100%
+  &__name
+    text-transform: uppercase
+    font-size: 13vw
+    word-spacing: -3vw
+    margin-bottom: 0
+    line-height: 0.9
+  &__design 
+    text-transform: lowercase
+    font-size: 0.4em
+  &__and
+    font-size: 0.1em
+    overflow: hidden
+    margin-bottom: 1em
+    display: inline-block
+    font-style: italic
+  &__development
+    margin: 0
+    font-size: 7vw
+    text-transform: uppercase
+    line-height: 1
+    color: #fff
+  &__devBG
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    background-color: $secondary
+    width: 100%
+    height: 100%
+  &__devWrap
+    position: relative
+    width: 100%
+
+
 
 
 @import './media'
