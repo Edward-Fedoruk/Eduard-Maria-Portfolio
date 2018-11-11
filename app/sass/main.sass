@@ -8,6 +8,15 @@ body
   font-family: HelveticaNeueCyr, Arial, Helvetica, sans-serif
   overflow-x: hidden
 
+.logo
+  width: 11vw
+  position: absolute
+  top: 4vw
+  left: 4vw
+  animation: rotate 3s linear infinite 
+
+@import '_mixins/rotate'
+
 .header
   display: flex
   &__title
@@ -37,7 +46,7 @@ body
     font-size: 7.2vw
     text-transform: uppercase
     line-height: .9
-    color: #fff
+    color: #FAF8F6
     font-weight: 900
   &__devBG
     position: absolute
@@ -122,7 +131,37 @@ body
     font-size: 10vw
     text-transform: uppercase
     color: $secondary
-    
+    margin-bottom: 2vw
+  &__gmail
+    font-size: 5vw
+    color: $secondary
+    display: inline-block
+    width: 100%
+    text-align: center
+  
+.social
+  margin-top: 5vw
+  margin-left: 4vw
+  margin-bottom: 5vw
+  &__wrap
+    display: flex
+    align-items: center
+  &__images
+    display: flex
+    align-items: center
+  &__icon
+    margin-right: 10px
+  &__freelancerName
+    width: 70px
+
+
+.end
+  width: 100%
+  text-align: center
+
+
+
+
 
 
 
