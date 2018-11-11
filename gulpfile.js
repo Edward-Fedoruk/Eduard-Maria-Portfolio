@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 gulp.task('js', function() {
 	return gulp.src([
 			'app/libs/jquery/*.js',
-			'app/libs/slick/*.js',
+			'app/libs/particles/particles.js',
 			'app/js/main.js'
 		]) 
 		.pipe(uglify())
