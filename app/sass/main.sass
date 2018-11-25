@@ -3,6 +3,10 @@
 @import './fonts'
 @import '_mixins/hr'
 
+html 
+  font-size: 16px
+  overflow-x: hidden
+
 body 
   background-color: $bgc
   font-family: HelveticaNeueCyr, Arial, Helvetica, sans-serif
@@ -55,6 +59,24 @@ body
 
 .navigation
   position: absolute
+  font-size: 1.9vw
+  &__list
+    list-style: none
+    text-transform: uppercase
+  &__navItem
+    margin: 2.5vw 0
+    cursor: pointer 
+    width: min-content
+    position: relative
+    .hr
+      width: 0px
+      position: absolute
+      right: 0
+      margin: 0
+    &:hover
+      .hr
+        left: 0
+        width: 100%
 
 .about
   width: 50vw
@@ -73,10 +95,10 @@ body
     width: 20vw 
     text-transform: uppercase
     margin: 0
-    font-size: .8vw
+    font-size: 0.625rem
   &__description
     width: 40vw
-    font-size: 1.6vw
+    font-size: 1.25rem
 
 .work
   margin-left: 27vw
@@ -107,7 +129,7 @@ body
   margin-left: 27vw
   &__wrap
     display: flex
-    width: 25%
+    width: 18rem
     flex-wrap: wrap
   &__portfolio
     font-size: 4vw
@@ -117,6 +139,7 @@ body
     width: 100%
     color: #000000
     margin-bottom: 30px
+    font-size: 1rem
 
 .contact
   margin-left: 27vw
