@@ -13,6 +13,7 @@ gulp.task('js', function() {
 	return gulp.src([
 			'app/libs/jquery/*.js',
 			'app/libs/particles/particles.js',
+			'app/libs/aos/aos.js',
 			'app/js/main.js'
 		]) 
 		.pipe(uglify())

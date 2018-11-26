@@ -14,12 +14,20 @@ body
 
 @import '_mixins/rotate'
 
+// wrapper for slide-up animation
+.outerSpan
+  overflow-y: hidden
+  display: inline-block
+  span 
+    display: inline-block
+
 .header
   display: flex
   &__title
     margin-left: 27vw
     width: 100%
   &__name
+    overflow-y: hidden
     text-transform: uppercase
     font-size: 15vw
     word-spacing: -4.3vw
@@ -27,9 +35,13 @@ body
     line-height: 0.9
     margin-top: 5vw
     font-weight: 200
+    padding-left: 4px
+    span 
+      display: inline-block
   &__design 
     text-transform: lowercase
-    font-size: 0.4em
+    font-size: .6em
+    line-height: 1
   &__and
     font-size: 0.1em
     overflow: hidden
@@ -60,6 +72,7 @@ body
 .navigation
   position: absolute
   font-size: 1.9vw
+  display: none
   &__list
     list-style: none
     text-transform: uppercase
@@ -68,6 +81,10 @@ body
     cursor: pointer 
     width: min-content
     position: relative
+    display: block
+    overflow-y: hidden
+    span 
+      display: inline-block
     .hr
       width: 0px
       position: absolute
