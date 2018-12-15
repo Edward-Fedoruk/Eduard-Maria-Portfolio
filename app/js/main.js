@@ -9,7 +9,7 @@ $( window ).on("load", function(e) {
   })
 })
 
-let startOffsetY = $(".navigation").offset().top
+let startOffsetY = $(".navigation").offset().top - $(window).scrollTop()
 $(window).on("scroll", function(e) {
   if (
     $(window).scrollTop() - $(".navigation").height() - startOffsetY < 
@@ -20,7 +20,13 @@ $(window).on("scroll", function(e) {
 
 $(".navigation__navItem").on("click", function(e) {
   let section = $(this).data("link")
-  console.log(section)
+  
+  $(".navigation__navItem .hr").each(function(e) {
+    $(this).removeClass("hr-active")
+  })
+
+  $(this).find(".hr").addClass("hr-active")
+
   $('html, body').animate({
       scrollTop: $(section).offset().top
   }, 2000, 'swing')
