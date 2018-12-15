@@ -28,19 +28,19 @@
 
   <nav class="navigation">
     <ul class="navigation__list">
-      <li class="navigation__navItem">
+      <li data-link=".about" class="navigation__navItem">
         <span data-aos-offset="0" data-aos-delay="300" data-aos="slide-up">about</span>
         <span class="hr"></span>
       </li>
-      <li class="navigation__navItem">
+      <li data-link=".work" class="navigation__navItem">
         <span data-aos-offset="0" data-aos-delay="300" data-aos="slide-up">work</span> 
         <span class="hr"></span>
       </li>
-      <li class="navigation__navItem">
+      <li data-link=".links" class="navigation__navItem">
         <span data-aos-offset="0" data-aos-delay="300" data-aos="slide-up">links</span> 
         <span class="hr"></span>
       </li>
-      <li class="navigation__navItem">
+      <li data-link=".contact" class="navigation__navItem">
         <span data-aos-offset="0" data-aos-delay="300" data-aos="slide-up">contact</span> 
         <span class="hr"></span>      
       </li>
@@ -60,7 +60,7 @@
           <span data-aos="slide-up">and designer</span>
         </span>
       </p>
-      <div class="about__partical" id="particles-js"></div>
+      <div data-aos="slide-left" class="about__partical" id="particles-js"></div>
     </div>
 
     <p class="about__description">
@@ -91,43 +91,93 @@
         <span data-aos="slide-up">work</span>
       </span>
     </h2>
-
-    <div class="hr"></div>
-
-    <div class="work__project">
-      <h3 class="work__projectName">timeline <br> (application)</h3>
-      <img class="work__screen" src="img/stats__background (1).png"/>
-      <p class="work__completed">nov. 30 <br> 2018</p>
+    
+    <div class="hr-wrap">
+      <div data-aos="slide-right" class="hr"></div>
     </div>
 
-    <div class="hr"></div>
-
-    <div class="work__project">
-      <h3 class="work__projectName">Transfer - kerch <br>(website)</h3>
-      <img class="work__screen" src="img/Frame.jpg"/>
-      <p class="work__completed">nov. 30 <br> 2018</p>
+    <a class="work__project" target="_newtab" href="https://edward-fedoruk.github.io/TimeLine/">
+      <h3 class="work__projectName">
+        <span class="outerSpan">
+          <span data-aos="slide-up">timeline</span>
+        </span> <br> 
+        <span class="outerSpan">
+          <span data-aos="slide-up">(application)</span>
+        </span>
+     </h3>
+      <span class="outerSpan">
+        <img data-aos="slide-up" class="work__screen" src="img/stats__background (1).png"/>
+      </span>
+      <p class="work__completed">
+        <span class="outerSpan">
+          <span data-aos="slide-up">nov. 30</span> 
+        </span><br> 
+        <span class="outerSpan">
+          <span data-aos="slide-up">2018</span> 
+        </span>
+      </p>
+    </a>
+    
+    <div class="hr-wrap">
+      <div data-aos="slide-right" class="hr"></div>
     </div>
+
+    <a class="work__project" href="" target="_newtab">
+      <h3 class="work__projectName">
+        <span class="outerSpan">
+          <span data-aos="slide-up">Transfer - kerch</span>
+        </span> <br> 
+        <span class="outerSpan">
+          <span data-aos="slide-up">(website)</span>
+        </span>
+      </h3>
+      <span class="outerSpan">
+        <img data-aos="slide-up" class="work__screen" src="img/Frame.jpg"/>
+      </span>
+      <p class="work__completed">
+        <span class="outerSpan">
+          <span data-aos="slide-up">nov. 30</span> 
+        </span><br> 
+        <span class="outerSpan">
+          <span data-aos="slide-up">2018</span> 
+        </span>
+      </p>
+    </a>
 
   </section>
 
   <section class="links">
-    <h3 class="links__portfolio">portfolio <br> links:</h3>
+    <h3 class="links__portfolio">
+      <span class="outerSpan">
+        <span data-aos="slide-up">portfolio</span> 
+      </span><br> 
+      <span class="outerSpan">
+        <span data-aos="slide-up">links:</span> 
+      </span>
+    </h3>
     <div class="links__wrap">
-      <a target="_newtab" href="https://github.com/Edward-Fedoruk" class="links__worker">Edward - Front-End Developer Portfolio</a>
-      <a target="_newtab" href="#" class="links__worker">Maria - UX/UI Designer Portfolio</a>
+      <span class="outerSpan">
+        <a data-aos="slide-up" target="_newtab" href="https://github.com/Edward-Fedoruk" class="links__worker">Edward - Front-End Developer Portfolio</a>
+      </span>
+      <span class="outerSpan">
+        <a data-aos="slide-up" target="_newtab" href="#" class="links__worker">Maria - UX/UI Designer Portfolio</a>
+      </span>
     </div>
   </section>
 
   <section class="contact">
-    <h3 class="contact__writeUs">Let's get in touch</h3>
-    <a class="contact__gmail" href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXFBVLCvBwckDFNklwmHCCWgTfTnfXmkSPqmcnmfmjKFsKmnsmFnXMFHVMFqrzRQpKWXx">artgraviton@gmail.com</a>
+    <h3 class="contact__writeUs outerSpan"><span data-aos="slide-up">Let's get in touch</span></h3>
+    <a class="contact__gmail" href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXFBVLCvBwckDFNklwmHCCWgTfTnfXmkSPqmcnmfmjKFsKmnsmFnXMFHVMFqrzRQpKWXx">
+      <span class="outerSpan">
+        <span data-aos="slide-up" class="contact__gmail">artgraviton@gmail.com</span>
+      </span>
+    </a>
   </section>
 
   <div class="social">
-
     <div class="social__wrap">
-      <p class="social__freelancerName">Edward:</p>
-      <div class="social__images">
+      <p data-aos="slide-up" data-aos-offset="0" class="social__freelancerName">Edward:</p>
+      <div data-aos="slide-up" data-aos-offset="0" class="social__images">
         <a href=""> 
           <img class="social__icon" src="img/twitter.svg" alt="twitter">
         </a>
@@ -144,8 +194,8 @@
     </div>
 
     <div class="social__wrap">
-      <p class="social__freelancerName">Maria:</p>
-      <div class="social__images">
+      <p data-aos="slide-up" data-aos-offset="0" class="social__freelancerName">Maria:</p>
+      <div data-aos="slide-up" data-aos-offset="0" class="social__images">
         <a href="https://www.behance.net/maria-rosa"> 
           <img class="social__icon" src="img/behence.svg" alt="behence">
         </a>
@@ -163,7 +213,11 @@
 
   </div>
 
-  <p class="end">2018. Portfolio</p>
+  <p class="end">
+    <span class="outerSpan">
+      <span  data-aos-offset="0" data-aos="slide-up">2018. Portfolio</span> 
+    </span>
+  </p>
 
 </body>
 </html>
