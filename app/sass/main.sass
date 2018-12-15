@@ -16,10 +16,13 @@ body
 
 // wrapper for slide-up animation
 .outerSpan
-  overflow-y: hidden
+  overflow: hidden
   display: inline-block
-  span 
+  span, a
     display: inline-block
+    margin: 0
+.hr-wrap
+  overflow: hidden
 
 .header
   display: flex
@@ -70,9 +73,9 @@ body
     width: 100%
 
 .navigation
-  position: absolute
+  position: fixed
+  top: 50%
   font-size: 1.9vw
-  display: none
   &__list
     list-style: none
     text-transform: uppercase
@@ -82,18 +85,23 @@ body
     width: min-content
     position: relative
     display: block
-    overflow-y: hidden
+    padding-bottom: 1px
+    overflow: hidden
     span 
-      display: inline-block
+      display: inline-block      
     .hr
-      width: 0px
+      width: 0%
       position: absolute
-      right: 0
+      height: 1px      
       margin: 0
+      right: 0px
     &:hover
       .hr
         left: 0
         width: 100%
+    .hr-active
+      left: 0
+      width: 100%
 
 .about
   width: 50vw
@@ -120,6 +128,8 @@ body
 .work
   margin-left: 27vw
   text-transform: uppercase
+  color: $primary
+  text-decoration: none
   &__head
     font-weight: 900
     font-size: 10vw
@@ -136,10 +146,15 @@ body
     justify-content: space-between
     margin-bottom: 30px
     cursor: pointer
+    text-decoration: none
   &__screen
     height: 15vw
   &__completed
     margin-right: 2vw
+.work__project:active
+  color: $secondary
+.work__project:visited
+  color: $primary
 
 .links
   width: 100%
@@ -157,6 +172,8 @@ body
     color: #000000
     margin-bottom: 30px
     font-size: 1rem
+
+
 
 .contact
   margin-left: 27vw
