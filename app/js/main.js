@@ -15,7 +15,7 @@ $(window).on("scroll", function(e) {
     $(window).scrollTop() - $(".navigation").height() - startOffsetY < 
     $(".navigation").offset().top - $(window).scrollTop()
   ) 
-    $(".navigation").css({top: (startOffsetY - $(window).scrollTop()/2) + 'px' })
+    $(".navigation").css({top: (startOffsetY - $(window).scrollTop()/3) + 'px' })
 })
 
 
@@ -49,9 +49,16 @@ $(window).on("scroll", function(e) {
 })
 
 $(".navigation__navItem").on("click", function(e) {
-  let section = $(this).data("link")
+  let sectionSelector = $(this).data("link")
 
   $('html, body').animate({
-      scrollTop: $(section).offset().top
+      scrollTop: $(sectionSelector).offset().top
   }, 2000, 'swing')
 })
+
+setInterval(function() {
+  const red = Math.round(Math.random() * 70) + 74;
+  const green = Math.round(Math.random() * 60) + 84;
+  const blue = Math.round(Math.random() * 50) + 54;
+  $(".about__particle").css("background-color", `rgb(${red}, ${green}, ${blue})`)
+}, 2000) 
