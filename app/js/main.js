@@ -9,16 +9,6 @@ $( window ).on("load", function(e) {
   })
 })
 
-let startOffsetY = $(".navigation").offset().top - $(window).scrollTop()
-$(window).on("scroll", function(e) {
-  if (
-    $(window).scrollTop() - $(".navigation").height() - startOffsetY < 
-    $(".navigation").offset().top - $(window).scrollTop()
-  ) 
-    $(".navigation").css({top: (startOffsetY - $(window).scrollTop()/3) + 'px' })
-})
-
-
 let sectionOffsets = []
 $(".navigation__navItem").each(function(e) {
   const sectionClass = $(this).data("link")
@@ -35,9 +25,9 @@ $(window).on("scroll", function(e) {
     const windowOffsetY = win.scrollTop()
     const sectionIndex = sectionOffsets.findIndex(pos => windowOffsetY <= pos)
 
-    if(prevIndex === sectionIndex) return
-
-    const prevMenuItem = $(".navigation__navItem .hr").get(prevIndex)
+    if(prevIndex === sectionIndex) return   
+       
+    let prevMenuItem = $(".navigation__navItem .hr").get(prevIndex)
     const currMenuItem = $(".navigation__navItem").get(sectionIndex)
 
     $(prevMenuItem).removeClass("hr-active")
@@ -57,8 +47,11 @@ $(".navigation__navItem").on("click", function(e) {
 })
 
 setInterval(function() {
-  const red = Math.round(Math.random() * 70) + 74;
-  const green = Math.round(Math.random() * 60) + 84;
-  const blue = Math.round(Math.random() * 50) + 54;
+  const red = 254;
+  const green = Math.round(Math.random() * 200) + 50;
+  const blue = Math.round(Math.random() * 100) + 25;
   $(".about__particle").css("background-color", `rgb(${red}, ${green}, ${blue})`)
+  $(".contact__writeUs").css("color", `rgb(${red}, ${green}, ${blue})`)
+  $(".contact__gmail").css("color", `rgb(${red}, ${green}, ${blue})`)
+
 }, 2000) 

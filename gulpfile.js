@@ -6,21 +6,35 @@ var gulp = require('gulp'),
 		concat = require('gulp-concat'),
 		autoprefixer = require('gulp-autoprefixer'),
 		cleanCSS = require('gulp-clean-css'),
-		imagemin = require('gulp-imagemin');
+		imagemin = require('gulp-imagemin'),
+		babel = require('gulp-babel');
 
 
-gulp.task('js', function() {
+gulp.task('js', ["babel"], function() {
 	return gulp.src([
 			'app/libs/jquery/*.js',
 			'app/libs/particles/particles.js',
 			'app/libs/aos/aos.js',
-			'app/js/main.js'
+			"app/js/babeljs.js"
 		]) 
 		.pipe(uglify())
 		.pipe(concat('common.min.js'))
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.stream());
 });
+
+
+gulp.task('babel', function() {
+	return gulp.src([
+		'app/js/main.js'
+	])
+	.pipe(babel({
+		presets: ['@babel/env']
+	}))
+	.pipe(concat("babeljs.js"))
+	.pipe(gulp.dest('app/js/'))
+
+})
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
@@ -36,7 +50,7 @@ gulp.task('sass', function() {
 
 gulp.task('serve', function() {
   browserSync.init({ 
-    server: 'app'
+    server: 'app'  
   }); 
 });
 
@@ -58,21 +72,21 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('build', ['imagemin', 'sass', 'js'], function() {
-	var buildHtml = gulp.src('app/*.html')
+	gulp.src('app/*.html')
 		.pipe(gulp.dest('dist'));
 	
-	var buildCss = gulp.src('app/css/main.min.css')
+	gulp.src('app/css/main.min.css')
 		.pipe(gulp.dest('dist/css'));
 
-	var buildHtml = gulp.src('app/html/**/*html')
+	gulp.src('app/html/**/*html')
 		.pipe(gulp.dest('dist'))
 
-	var buildJs = gulp.src('app/js/common.min.js')
+	gulp.src('app/js/common.min.js')
 		.pipe(gulp.dest('dist/js'));
 	
-	var buildFonts = gulp.src('app/fonts/**/*')
+	gulp.src('app/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));
 	
-	var buildWebFonts = gulp.src('app/webfonts/*')
+	gulp.src('app/webfonts/*')
 		.pipe(gulp.dest('dist/webfonts'));
 });
